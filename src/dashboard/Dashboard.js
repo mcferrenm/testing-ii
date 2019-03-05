@@ -13,7 +13,7 @@ class Dashboard extends Component {
         </button>
 
         <button>Foul</button>
-        <button>Hit</button>
+        <button data-testid="hit-btn" onClick={this.props.hit}>Hit</button>
       </div>
     );
   }

@@ -33,12 +33,16 @@ class App extends Component {
       }));
     }
   };
-  
+
+  hit = () => {
+    this.reset()
+  }
+
   render() {
     return (
       <div className="App">
         <Display count={this.state} />
-        <Dashboard strike={this.strike} ball={this.ball} />
+        <Dashboard strike={this.strike} ball={this.ball} hit={this.hit}/>
       </div>
     );
   }

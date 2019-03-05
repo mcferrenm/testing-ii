@@ -33,4 +33,17 @@ describe("<App />", () => {
     const ballCount = getByTestId(/ball-count/i);
     expect(ballCount).not.toBe("4")
   });
+
+  it('should reset count when strikes is 3 or balls is 4', () => {
+    const { getByTestId } = render(<App />);
+    
+    const hitBtn = getByTestId(/hit-btn/i);
+    
+    fireEvent.click(hitBtn);
+    
+    const strikeCount = getByTestId(/strike-count/i);
+    expect(strikeCount.textContent).toBe("0")
+    const ballCount = getByTestId(/ball-count/i);
+    expect(ballCount.textContent).toBe("0")
+  });
 });
