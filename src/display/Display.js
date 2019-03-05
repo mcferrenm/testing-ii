@@ -6,8 +6,8 @@ class Display extends Component {
     return (
       <div>
         <h1>Baseball!</h1>
-        <p>Strikes: {this.props.count.strikes}</p>
-        <p>Balls: {this.props.count.balls}</p>
+        <p>Strikes:</p> <p data-testid="strike-count">{this.props.count.strikes}</p>
+        <p>Balls:</p> <p data-testid="ball-count">{this.props.count.balls}</p>
       </div>
     );
   }

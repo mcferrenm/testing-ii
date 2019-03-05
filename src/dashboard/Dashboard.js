@@ -3,12 +3,19 @@ import React, { Component } from "react";
 class Dashboard extends Component {
   state = {};
   render() {
-    return <div>
-      <button>Strike</button>
-      <button>Ball</button>
-      <button>Foul</button>
-      <button>Hit</button>
-    </div>;
+    return (
+      <div>
+        <button data-testid="strike-btn" onClick={this.props.strike}>
+          Strike
+        </button>
+        <button data-testid="ball-btn" onClick={this.props.ball}>
+          Ball
+        </button>
+
+        <button>Foul</button>
+        <button>Hit</button>
+      </div>
+    );
   }
 }
 
