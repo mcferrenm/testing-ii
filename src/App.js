@@ -10,17 +10,30 @@ class App extends Component {
     strikes: 0
   };
 
+  reset = () => {
+    this.setState({ strikes: 0, balls: 0 });
+  };
+
   strike = e => {
-    this.setState(prevState => ({
-      strikes: prevState.strikes + 1
-    }));
+    if (this.state.strikes === 2) {
+      this.reset();
+    } else {
+      this.setState(prevState => ({
+        strikes: prevState.strikes + 1
+      }));
+    }
   };
 
   ball = e => {
-    this.setState(prevState => ({
-      balls: prevState.balls + 1
-    }));
+    if (this.state.balls === 3) {
+      this.reset();
+    } else {
+      this.setState(prevState => ({
+        balls: prevState.balls + 1
+      }));
+    }
   };
+  
   render() {
     return (
       <div className="App">
