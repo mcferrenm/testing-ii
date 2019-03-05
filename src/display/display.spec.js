@@ -5,7 +5,7 @@ import "jest-dom/extend-expect";
 import Display from "./Display";
 
 describe("<Display />", () => {
-  it("should render balls and strikes", () => {
+  it("should render the lables 'Balls:' and 'Strikes:'", () => {
     const count = {
       balls: 0,
       strikes: 0

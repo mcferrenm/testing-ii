@@ -5,7 +5,7 @@ class Display extends Component {
   render() {
     return (
       <div>
-        <h1>Display</h1>
+        <h1>Baseball!</h1>
         <p>Strikes: {this.props.count.strikes}</p>
         <p>Balls: {this.props.count.balls}</p>
       </div>
